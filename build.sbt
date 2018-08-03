@@ -12,3 +12,6 @@ lazy val scala_protobuff = (project in file("scala_protobuff"))
     scalaVersion := "2.12.5",
     )
 
+PB.targets in Compile := Seq(
+    scalapb.gen() -> (sourceManaged in Compile).value
+)
