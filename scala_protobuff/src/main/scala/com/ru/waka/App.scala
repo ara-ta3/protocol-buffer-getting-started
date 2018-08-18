@@ -1,5 +1,6 @@
 package com.ru.waka
 
+import com.ru.waka.hoge.Hoge
 import org.json4s.{DefaultFormats, Formats}
 
 class App extends AppStack {
@@ -10,10 +11,8 @@ class App extends AppStack {
   }
 
   get("/json") {
-    App.Hoge("aaa")
+    Hoge(id=1, name= "hoge")
   }
 }
 
-object App {
-  case class Hoge(a: String)
-}
+
